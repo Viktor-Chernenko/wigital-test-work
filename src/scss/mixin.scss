@@ -1,22 +1,35 @@
-@mixin title($after, $before, $left, $right) {
+@mixin title($after, $before, $left, $right, $width) {
     position: relative;
+    display: inline;
     font-family: $font-basis-Bold-Condensed;
     font-size: $fz-title;
     text-transform: uppercase;
 
     &::after {
         position: absolute;
+        top: 0;
+        bottom: 0;
         left: $left;
         display: flex;
         align-items: center;
+        width: $width;
+        height: 9px;
+        margin: auto;
         content: '';
+        background: $after;
     }
 
     &::before {
         position: absolute;
+        top: 0;
         right: $right;
+        bottom: 0;
         display: flex;
         align-items: center;
+        width: $width;
+        height: 9px;
+        margin: auto;
         content: '';
+        background: $before;
     }
 }
