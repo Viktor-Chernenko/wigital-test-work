@@ -1,0 +1,22 @@
+@mixin title($after, $before, $left, $right) {
+    position: relative;
+    font-family: $font-basis-Bold-Condensed;
+    font-size: $fz-title;
+    text-transform: uppercase;
+
+    &::after {
+        position: absolute;
+        left: $left;
+        display: flex;
+        align-items: center;
+        content: '';
+    }
+
+    &::before {
+        position: absolute;
+        right: $right;
+        display: flex;
+        align-items: center;
+        content: '';
+    }
+}
