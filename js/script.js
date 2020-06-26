@@ -30,15 +30,18 @@ if (document.readyState || document.body.readyState=='complete') {
   
     btn.onclick = function() {
       modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
     }
 
     span.onclick = function() {
       modal.style.display = "none";
+      document.body.style.overflow = "auto";
     }
 
     window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
+        document.body.style.overflow = "auto";
       }
     }
 }
